@@ -68,7 +68,7 @@
   <view class="hot">{{ hot }}</view>
   <view class="hotContent">
   <block wx:for="{{ hotlist }}" wx:key="*this">
-  <navigator url="{{ item.http }}" class="hotContentA">{{ item.content }}</navigator>
+  <navigator url="{{ item.http }}" style="border-color:{{ item.bordercolor }}; color:{{item.hotcolor }}" class="hotContentA">{{ item.content }}</navigator>
   </block>
   </view>
   </view>
@@ -81,7 +81,8 @@
   </navigator>
   </view>
   <!-- swipper -->
-  <swiper vertical="{{ slidingDirection }}"  circular="{{ circulars }}" display-multiple-items="{{ hotlengths }}">
+  <!-- <view > -->
+  <swiper class="hotBoxBOT" vertical="{{ slidingDirection }}"  circular="{{ circulars }}" display-multiple-items="{{ hotlengths }}">
   <block wx:for="{{ hotListBox }}" wx:key="*this">
   <swiper-item>
   <view class="hotListBoxwaft">
@@ -99,4 +100,5 @@
   </swiper-item>
   </block>
   </swiper>
+  <!-- </view> -->
 </view>
