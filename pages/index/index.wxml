@@ -20,8 +20,8 @@
   <block wx:for="{{date}}" wx:key="*this">
   <swiper-item class="swiperStyle">
   <navigator url="{{item.http}}">
-  <image class="imageSwipper" src="{{ item.url }}" ></image>
-  <text class="titlea">{{ item.title }}</text>
+  <image class="imageSwipper" src="{{ item.touxiang }}" ></image>
+  <text class="titlea">{{ item.type }}</text>
   </navigator>
   </swiper-item>
     </block>
@@ -38,8 +38,8 @@
   <block wx:for="{{author}}" wx:key="*this">
   <swiper-item class="swiperStyle">
   <navigator url="{{item.http}}">
-  <image class="imageSwipper" src="{{ item.url }}" ></image>
-  <text class="titlea">{{ item.title }}</text>
+  <image class="imageSwipper" src="{{ item.touxiang }}" ></image>
+  <text class="titlea">{{ item.name }}</text>
   </navigator>
   </swiper-item>
     </block>
@@ -68,7 +68,7 @@
   <view class="hot">{{ hot }}</view>
   <view class="hotContent">
   <block wx:for="{{ hotlist }}" wx:key="*this">
-  <navigator url="{{ item.http }}" style="border-color:{{ item.bordercolor }}; color:{{item.hotcolor }}" class="hotContentA">{{ item.content }}</navigator>
+  <navigator url="{{ item.http }}" style="border-color:{{ bordercolors[index] }}; color:{{  bordercolors[index] }}" class="hotContentA">{{ item.title }}</navigator>
   </block>
   </view>
   </view>
@@ -91,6 +91,7 @@
   <view class="hotListJJTitle">{{ item.title }}</view>
   <view class="hotListJJName">{{ item.name }}</view>
   <view class="hotListJJContent">{{ item.content }}</view>
+  <navigator class="hotListDD iconfont icon-dian"></navigator>
   </view>
   </view>
   <navigator class="hotListnav">

@@ -13,11 +13,32 @@
       "unicode_decimal": 58992
     },
     {
+      "icon_id": "9015766",
+      "name": "方块",
+      "font_class": "sign-blue",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "9811644",
+      "name": "点",
+      "font_class": "dian",
+      "unicode": "e6a2",
+      "unicode_decimal": 59042
+    },
+    {
       "icon_id": "11949139",
       "name": "搜索--1",
       "font_class": "icon-search",
       "unicode": "e501",
       "unicode_decimal": 58625
+    },
+    {
+      "icon_id": "12165825",
+      "name": "四方块-实",
+      "font_class": "sifangkuai-shi",
+      "unicode": "e88d",
+      "unicode_decimal": 59533
     }
   ]
 }

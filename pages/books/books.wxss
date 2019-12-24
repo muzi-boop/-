@@ -1,1 +1,111 @@
 /* pages/books/books.wxss */
+.container{
+  background: #21272e;
+}
+.topBox{
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  position: relative;
+}
+.topBoxTitle{
+  line-height: 90rpx;
+  font-size: 30rpx;
+  color: #fff;
+}
+.topBoxList{
+  color: #fff;
+  position: absolute;
+  top: 25rpx;
+  right: 20rpx;
+  font-size: 36rpx;
+}
+
+/* 正在 */
+.readingBox{
+  width: 100%;
+  height: 96rpx;
+  display:flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.readLeft{
+  font-size: 36rpx;
+  line-height: 96rpx;
+  color: #fff;
+}
+.readRightBox{
+  line-height: 96rpx;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: baseline;
+}
+.whole{
+  color: #fff;
+  font-size: 26rpx;
+  line-height: 96rpx;
+}
+.sort{
+  padding-left: 10rpx;
+  color: #fff;
+  font-size: 22rpx;
+  line-height: 96rpx;
+}
+
+/* 阅读 */
+.readContentBox{
+  margin-top: 30rpx;
+   margin-bottom: 30rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction:row; 
+}
+.readA{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+.readImg{
+  width: 192rpx;
+  height: 296rpx;
+}
+.name{
+  font-size: 30rpx;
+  color: #fff;
+  padding-top: 10rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.title{
+  font-size: 26rpx;
+  color: #5d637c;
+  padding-top: 10rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* 未读 */
+.unreadContentBox{
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction:row; 
+  flex-wrap: wrap;
+}
+.unreadA{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+.unreadImg{
+  width: 192rpx;
+  height: 296rpx;
+}
