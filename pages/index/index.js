@@ -99,18 +99,28 @@ Page({
     hotlist: [{
       content: "2018排行榜",
       http: "",
+      bordercolor: "#ab4065",
+      hotcolor: "#ab4065"
     }, {
       content: "职场热门",
       http: "",
+      bordercolor: "#00aaff",
+        hotcolor: "#00aaff"
     }, {
       content: "都是言情",
       http: "",
+      bordercolor: "#aa00ff",
+        hotcolor: "#aa00ff"
     }, {
       content: "哈弗大学经济管理类",
       http: "",
+        bordercolor: "#aaff00",
+        hotcolor: "#aaff00"
     }, {
       content: "领导才能",
       http: "",
+        bordercolor: "#dac0ff",
+        hotcolor: "#dac0ff"
     }],
 
     hotListBox: [{
@@ -188,6 +198,13 @@ Page({
    */
   onShareAppMessage: function() {
 
-  }
+  },
 
+  colorth: function() { //十六进制颜色随机
+    var r = Math.floor(Math.random() * 256);
+    var g = Math.floor(Math.random() * 256);
+    var b = Math.floor(Math.random() * 256);
+    var color = '#' + r.toString(16) + g.toString(16) + b.toString(16);
+    return color;
+  }
 })
