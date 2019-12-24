@@ -1,2 +1,45 @@
 <!--pages/books/books.wxml-->
-<text>pages/books/books.wxml</text>
+<view class="container">
+<view class="topBox">
+  <view class="topBoxTitle">{{ topBoxTitle }}</view>
+  <view class="topBoxList iconfont icon-Shapecopy-copy"></view>
+</view>
+
+<view class="readingBox">
+<view class="readLeft">{{ readLeft }}</view>
+<navigator class="readRightBox">
+<text class="whole">{{ wholes }}</text>
+<text class="sort iconfont icon-you"></text>
+</navigator>
+</view>
+
+<view class="readContentBox">
+<block wx:for="{{ readBox }}" wx:key="*this">
+<navigator class="readA">
+<image class="readImg" src="{{ item.touxiang }}"></image>
+<view class="name">{{ item.name }}</view>
+<view class="title">{{ item.title }}</view>
+</navigator>
+</block>
+</view>
+<!-- 未读区域 -->
+<view class="readingBox">
+<view class="readLeft">{{ unreadLeft }}</view>
+<navigator class="readRightBox">
+<text class="whole">{{ wholes }}</text>
+<text class="sort iconfont icon-you"></text>
+</navigator>
+</view>
+<!-- for  --------------- -->
+<view class="unreadContentBox">
+<block wx:for="{{ unreadBox }}" wx:key="*this">
+<navigator class="unreadA">
+<image class="unreadImg" src="{{ item.touxiang }}"></image>
+<view class="name">{{ item.name }}</view>
+<view class="title">{{ item.title }}</view>
+</navigator>
+</block>
+</view>
+
+</view>
+

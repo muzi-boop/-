@@ -15,51 +15,64 @@ Page({
     newReleaseRanking: "新发布",
     newReleaseRankingCKQB: "查看全部",
     slidingDirection: false,
-    circulars: true,
+    circulars: false,
     lengths: 3.5,
     hotlengths: 1.05,
     hot: "热门搜索",
     hotListRanking: "热销榜",
     hotListRankingCKQB: "查看全部",
+    bordercolors: [],
     date: [{
-      url: "https://wujunhui.xyz/fenlei1.png",
+      touxiang: "https://wujunhui.xyz/fenlei1.png",
       http: "",
-      title: "科幻"
+      type: "科幻"
     }, {
-      url: "https://wujunhui.xyz/fenlei2.png",
+      touxiang: "https://wujunhui.xyz/fenlei2.png",
       http: "",
-      title: "生活"
+      type: "生活"
     }, {
-      url: "https://wujunhui.xyz/fenlei3.png",
+      touxiang: "https://wujunhui.xyz/fenlei3.png",
       http: "",
-      title: "露营"
+      type: "露营"
     }, {
-      url: "https://wujunhui.xyz/fenlei1.png",
+      touxiang: "https://wujunhui.xyz/fenlei1.png",
       http: "",
-      title: "职场"
+      type: "职场"
     }, {
-      url: "https://wujunhui.xyz/fenlei2.png",
+      touxiang: "https://wujunhui.xyz/fenlei2.png",
       http: "",
-      title: "爱好"
+      type: "言情"
+    }, {
+      touxiang: "https://wujunhui.xyz/fenlei3.png",
+      http: "",
+      type: "艺术"
+    }, {
+      touxiang: "https://wujunhui.xyz/fenlei1.png",
+      http: "",
+      type: "军事"
+    }, {
+      touxiang: "https://wujunhui.xyz/fenlei2.png",
+      http: "",
+      type: "科学"
     }],
 
 
     author: [{
-      url: "https://wujunhui.xyz/zz-lcx.png",
+      touxiang: "https://wujunhui.xyz/zz-lcx.png",
       http: "",
-      title: "刘慈欣"
+      name: "刘慈欣"
     }, {
-      url: "https://wujunhui.xyz/zz-txh.png",
-      title: "田小花"
+        touxiang: "https://wujunhui.xyz/zz-txh.png",
+      name: "田小花"
     }, {
-      url: "https://wujunhui.xyz/zz-meks.png",
-      title: "马尔克斯"
+        touxiang: "https://wujunhui.xyz/zz-meks.png",
+      name: "马尔克斯"
     }, {
-      url: "https://wujunhui.xyz/fenlei1.png",
-      title: "余秋雨"
+        touxiang: "https://wujunhui.xyz/fenlei1.png",
+      name: "余秋雨"
     }, {
-      url: "https://wujunhui.xyz/zz-yqy.png",
-      title: "爱好"
+        touxiang: "https://wujunhui.xyz/zz-wzj.png",
+      name: "王中军"
     }],
 
     sixDiagram: [{
@@ -97,31 +110,25 @@ Page({
     ],
 
     hotlist: [{
-      content: "2018排行榜",
+      title: "2018排行榜",
       http: "",
-      bordercolor: "#ab4065",
-      hotcolor: "#ab4065"
+      id: 1,
     }, {
-      content: "职场热门",
+        title: "职场热门",
       http: "",
-      bordercolor: "#00aaff",
-        hotcolor: "#00aaff"
     }, {
-      content: "都是言情",
+        title: "都是言情",
       http: "",
-      bordercolor: "#aa00ff",
-        hotcolor: "#aa00ff"
     }, {
-      content: "哈弗大学经济管理类",
+        title: "哈弗大学经济管理类",
       http: "",
-        bordercolor: "#aaff00",
-        hotcolor: "#aaff00"
-    }, {
-      content: "领导才能",
+    }, {  
+        title: "领导才能",
       http: "",
-        bordercolor: "#dac0ff",
-        hotcolor: "#dac0ff"
-    }],
+      }, {
+        title: "2020清华大学录取线",
+        http: "",
+      }],
 
     hotListBox: [{
       imgUrl: " https://wujunhui.xyz/book-santi.png",
@@ -129,18 +136,18 @@ Page({
       name: "作者：刘慈欣",
       content: "刘慈欣创作的系列长篇科幻小说地球往事三部曲的第三部作品"
     }, {
-      imgUrl: " https://wujunhui.xyz/book-santi.png",
-      title: "三体：死神永生",
+      imgUrl: " https://wujunhui.xyz/book-wljs.png",
+      title: "未来简史",
       name: "作者：刘慈欣",
       content: "刘慈欣创作的系列长篇科幻小说地球往事三部曲的第三部作品"
     }, {
-      imgUrl: " https://wujunhui.xyz/book-santi.png",
-      title: "三体：死神永生",
+      imgUrl: " https://wujunhui.xyz/book-xcjs.png",
+      title: "乡村教师",
       name: "作者：刘慈欣",
       content: "刘慈欣创作的系列长篇科幻小说地球往事三部曲的第三部作品"
     }, {
-      imgUrl: " https://wujunhui.xyz/book-santi.png",
-      title: "三体：死神永生",
+      imgUrl: " https://wujunhui.xyz/book-pfdsj.png",
+      title: "平凡的世界",
       name: "作者：刘慈欣",
       content: "刘慈欣创作的系列长篇科幻小说地球往事三部曲的第三部作品"
     }]
@@ -149,7 +156,16 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {},
+  onLoad: function() {
+    var srr = this.bordercolor();
+    console.log(srr)
+    this.setData({
+      bordercolors: srr.sort((a, b) => {
+        return Math.random() - 0.5;
+      })
+    })
+
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -199,12 +215,23 @@ Page({
   onShareAppMessage: function() {
 
   },
-
-  colorth: function() { //十六进制颜色随机
-    var r = Math.floor(Math.random() * 256);
-    var g = Math.floor(Math.random() * 256);
-    var b = Math.floor(Math.random() * 256);
-    var color = '#' + r.toString(16) + g.toString(16) + b.toString(16);
-    return color;
+  bordercolor: function() { //十六进制颜色随机
+    var arr = [];
+    var fun = function() {
+      var r = Math.floor(Math.random() * 256);
+      var g = Math.floor(Math.random() * 256);
+      var b = Math.floor(Math.random() * 256);
+      var color = '#' + r.toString(16) + g.toString(16) + b.toString(16);
+      if (color === "#21272e" || color === "#000000"){
+        color = "#ffffff";
+        return color
+      }else{
+        return color;
+      }
+    }
+    for (var i = 0; i < this.data.hotlist.length; i++) {
+      arr.push(fun())
+    }
+    return arr;
   }
 })

@@ -1,4 +1,29 @@
 <!--logs.wxml-->
-<view class="container log-list">
- 
+<view class="container">
+
+<view class="topBox">
+  <view class="topBoxTitle">{{ topBoxTitle }}</view>
+  <view class="topBoxLista iconfont icon-sign-blue"></view>
+  <view class="topBoxList iconfont icon-sifangkuai-shi"></view>
+</view>
+<!--  -->
+<block wx:for="{{ messageBox }}" wx:key="*this">
+<view class="messageBox">
+<navigator class="messageA">
+<image class="messageImg" src="{{ item.messageImg }}"></image>
+</navigator>
+<view class="messagetitle">{{ item.messagetitle }}</view>
+<view class="messageName">{{ item.messageName }}</view>
+<view class="iconBox">
+<navigator class="iconNav" url="{{item.messagea}}"> <image class="iconImg" src="{{item.imga}}"></image> </navigator>
+<navigator class="iconNav" url="{{item.messagea}}"> <image class="iconImg" src="{{item.imga}}"></image> </navigator>
+<navigator class="iconNav" url="{{item.messagea}}"> <image class="iconImg" src="{{item.imga}}"></image> </navigator>
+<navigator class="iconNav" url="{{item.messagea}}"> <image class="iconImg" src="{{item.imga}}"></image> </navigator>
+</view>
+<view class="alreadyRead">{{ item.alreadyRead }}</view>
+</view>
+</block>
+
+
+
 </view>
