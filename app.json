@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/books/books",
+    "pages/user/user"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#21272e",
+    "navigationBarTitleText": "Sanwei Bookstore",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "position":"bottom",
+    "backgroundColor":"#2a313a",
+    "color":"#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath":"img/index.png",
+        "selectedIconPath":"image/index.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "iconPath": "img/diqiu.png",
+        "selectedIconPath": "image/diqiu.png"
+      },
+      {
+        "pagePath": "pages/books/books",
+        "iconPath": "img/shuji.png",
+        "selectedIconPath": "image/shuji.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "img/gerenzhongxinwoderenwubiaozhuntoumianxing.png",
+        "selectedIconPath": "image/gerenzhongxinwoderenwubiaozhuntoumianxing.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,102 @@
+<!--index.wxml-->
+
+<view class="container ">
+  <view class="top">
+    <icon class="iconLeft iconfont icon-jiangbei"></icon>
+    <icon class="iconRight iconfont icon-Shapecopy-copy"></icon>
+  </view>
+  <view class="search">
+   <icon class="iconLefts iconfont icon-icon-search"></icon>
+    <input type="text" placeholder="搜索..." class="searchInput"></input>
+  </view>
+  <!-- 搜索一下、皆为内容区域 -->
+  <view class="sortRanking">
+  <text class="sortBox">{{sortRanking}}</text>
+  <navigator class="sortRankingRightBox"><text class="CKQB">{{sortRankingCKQB}}</text> <text class="iconYou iconfont icon-you"></text>      </navigator>
+  </view>
+  <!--  -->
+  <view class="swipperBox">
+  <swiper vertical="{{ slidingDirection }}" class="Hswipper" circular="{{ circulars }}" display-multiple-items="{{ lengths }}">
+  <block wx:for="{{date}}" wx:key="*this">
+  <swiper-item class="swiperStyle">
+  <navigator url="{{item.http}}">
+  <image class="imageSwipper" src="{{ item.url }}" ></image>
+  <text class="titlea">{{ item.title }}</text>
+  </navigator>
+  </swiper-item>
+    </block>
+  </swiper>
+  </view>
+  <!-- 粘贴过来的 -->
+  <view class="sortRanking">
+  <text class="sortBox">{{ authorRanking }}</text>
+  <navigator class="sortRankingRightBox"><text class="CKQB">{{authorRankingCKQB}}</text> <text class="iconYou iconfont icon-you"></text>      </navigator>
+  </view>
+  <!-- 轮播图 -->
+  <view class="swipperBox">
+  <swiper vertical="{{ slidingDirection }}" class="Hswipper" circular="{{ circulars }}" display-multiple-items="{{ lengths }}">
+  <block wx:for="{{author}}" wx:key="*this">
+  <swiper-item class="swiperStyle">
+  <navigator url="{{item.http}}">
+  <image class="imageSwipper" src="{{ item.url }}" ></image>
+  <text class="titlea">{{ item.title }}</text>
+  </navigator>
+  </swiper-item>
+    </block>
+  </swiper>
+  </view>
+
+  <!-- 粘贴 -->
+  <view class="sortRanking">
+  <text class="sortBox">{{ newReleaseRanking }}</text>
+  <navigator class="sortRankingRightBox"><text class="CKQB">{{newReleaseRankingCKQB}}</text> <text class="iconYou iconfont icon-you"></text>      
+  </navigator>
+  </view>
+  <!-- 六图区域 -->
+  <view class="sixDiagramBox">
+  <block wx:for="{{ sixDiagram }}" wx:key="*this">
+  <navigator url="{{ item.http }}" class="sixDiagramA">
+  <image src="{{ item.url }}" class="sixDiagramImg"></image>
+  <view class="sixDiagramTitle">{{ item.title }}</view>
+  <view class="sixDiagramName">{{ item.name }}</view>
+  </navigator>
+  </block>
+  </view>
+
+  <!-- 热门搜索 -->
+  <view class="hotBox">
+  <view class="hot">{{ hot }}</view>
+  <view class="hotContent">
+  <block wx:for="{{ hotlist }}" wx:key="*this">
+  <navigator url="{{ item.http }}" class="hotContentA">{{ item.content }}</navigator>
+  </block>
+  </view>
+  </view>
+
+  <!-- 最后一个 -->
+   <!-- 粘贴 -->
+  <view class="sortRanking">
+  <text class="sortBox">{{ hotListRanking }}</text>
+  <navigator class="sortRankingRightBox"><text class="CKQB">{{hotListRankingCKQB}}</text> <text class="iconYou iconfont icon-you"></text>      
+  </navigator>
+  </view>
+  <!-- swipper -->
+  <swiper vertical="{{ slidingDirection }}"  circular="{{ circulars }}" display-multiple-items="{{ hotlengths }}">
+  <block wx:for="{{ hotListBox }}" wx:key="*this">
+  <swiper-item>
+  <view class="hotListBoxwaft">
+  <view class="hotListBox">
+  <view class="hotListJJ">
+  <view class="hotListJJTitle">{{ item.title }}</view>
+  <view class="hotListJJName">{{ item.name }}</view>
+  <view class="hotListJJContent">{{ item.content }}</view>
+  </view>
+  </view>
+  <navigator class="hotListnav">
+  <image src="{{ item.imgUrl }}" class="hotListImg"></image>
+  </navigator>
+  </view>
+  </swiper-item>
+  </block>
+  </swiper>
+</view>
