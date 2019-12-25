@@ -44,7 +44,7 @@
 }
 .messageA{
   display: block;
-  margin-top: 50rpx;
+  margin-top: 60rpx;
 }
 .messageImg{
   width: 390rpx;
@@ -53,28 +53,29 @@
 .messagetitle{
   color: #fff;
   font-size: 38rpx;
-  margin-top: 40rpx;
+  margin-top: 30rpx;
 }
 .messageName{
   color: #565b6a;
-   margin-top: 40rpx;
+   margin-top: 20rpx;
 }
 .messageName::after{
   content: "";
   display: block;
   border-bottom: 1px solid #2e3640;
   width: 390rpx;
-  margin: 40rpx auto;
+  margin: 30rpx auto;
 }
 .iconBox{
-  margin: 40rpx auto;
+  margin: 20rpx auto;
   width: 390rpx;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: row;
 }
 .iconNav{
   display: flex;
+  justify-content: center;
   flex: 1;
 }
 .iconImg{
@@ -84,5 +85,5 @@
 
 .alreadyRead{
   color: #fff;
-  padding-bottom: 100rpx;
+  padding-bottom: 80rpx;
 }
