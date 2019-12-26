@@ -1,0 +1,84 @@
+<!--pages/BookDetail/bookDetail.wxml-->
+<view class="bookDetailBox">
+  <image class="bookLeftBox" src="{{ list.touxiang }}"></image>
+  <view class="bookLeftToBox">
+    <view class="bookTitle">{{ list.bookname }}</view>
+    <view class="bookName">作者:{{ list.writername }}</view>
+    <view class="bookAbout">{{ list.about }}</view>
+    <view class="bookScore">
+      <icon class="bookIcon iconfont icon-xingxing"></icon>
+      <icon class="bookIcon iconfont icon-xingxing"></icon>
+      <icon class="bookIcon iconfont icon-xingxing"></icon>
+      <icon class="bookIcon iconfont icon-xingxing"></icon>
+      <icon class="bookIcon iconfont icon-xingxing"></icon>
+      <text class="bookIconText"> 5.0 {{ list.satr }}</text>
+    </view>
+  </view>
+</view>
+<!--  -->
+<view class="bookContentStyle">
+  <view class="bookChoice">
+    <view class="iconsBox">
+      <icon class="iconX iconfont icon-xin-"></icon>
+      <text class="bookCollection">{{ collection }}</text>
+    </view>
+    <view class="iconsBox ">
+      <icon class="iconF iconfont icon-fenxiang"></icon>
+      <text class="share">{{ share }}</text>
+    </view>
+    <view class="iconsBox">
+      <icon class="iconS iconfont icon-stake-copy-copy"></icon>
+      <text class="book">{{ book }}</text>
+    </view>
+  </view>
+  <!-- 详情 -->
+  <view class="detail">{{ detail }}</view>
+  <view class="detailContentBox">
+    <text class="detailContent">{{ list.about }}</text>
+  </view>
+  <!-- 查看目录 -->
+  <navigator class="cataBox">
+    <view class="cataLeft">{{ cataLeft }}</view>
+    <icon class="cataIcon iconfont icon-you">
+    </icon>
+  </navigator>
+  <!-- 评论 -->
+  <view class="comment">
+    <view class="commmentLeft">
+      <text class="commmentLeftText">{{ commmentLeftText }}</text>
+      <navigator class="commmentLeftA">{{ commmentLeftA }}</navigator>
+    </view>
+    <icon class="commentRight iconfont icon-tubiaozhizuomobanyihuifu-"></icon>
+  </view>
+  <!-- 评论内容 -->
+  <block wx:for="{{ comment }}" wx:key="*this">
+    <view class="commentContentBox">
+      <view class="commentContentBoxLeft">
+        <image class="commentContentBoxLeftImg" src="{{ item.img }}"></image>
+      </view>
+      <view class="commentContentBoxRight">
+        <view class="commentConSTitle">{{ item.nickName }}</view>
+        <view class="commentContText">{{ item.about }}</view>
+        <view class="commentContentBoxDown">
+          <view class="commentContentBoxDownLeft">{{ item.datas }}</view>
+          <view class="commentContentBoxDownRight">
+            <view class="commentContentBoxDownRightZ">
+            <icon class="commentContentBoxDownRightZIcon iconfont icon-xin-"></icon>
+            <text class="commentContentBoxDownRightZText">{{ item.num1 }}</text>
+            </view>
+            <view class="commentContentBoxDownRightY">
+            <icon class="commentContentBoxDownRightYIcon iconfont icon-xinxi"></icon>
+            <text class="commentContentBoxDownRightYText">{{ item.num2 }}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+
+
+
+
+
+
+</view>

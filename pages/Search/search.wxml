@@ -1,0 +1,41 @@
+<!--pages/Search/search.wxml-->
+<view class="container">
+
+  <view class="searchBox">
+    <view class="search">
+      <icon class="iconLefts iconfont icon-icon-search"></icon>
+      <input class="searchInput" type="text" placeholder="搜索..."></input>
+    </view>
+    <view class="searchCancel">{{ cancel }}</view>
+  </view>
+
+  <view class="sortRanking">
+    <text class="sortBox">{{ authorRanking }}</text>
+    <navigator class="sortRankingRightBox">
+      <text class="CKQB">{{authorRankingCKQB}}</text>
+      <text class="iconYou iconfont icon-you"></text>
+    </navigator>
+  </view>
+
+  <view class="readContentBox">
+    <block wx:for="{{ searchList }}" wx:key="*this">
+      <navigator class="readA">
+        <image class="readImg" src="{{ item.touxiang }}"></image>
+        <view class="name">{{ item.bookname }}</view>
+        <view class="title">{{ item.writername }}</view>
+      </navigator>
+    </block>
+  </view>
+
+   <view class="searchHistory">
+    <text class="sortBox">{{ searchHistory }}</text>
+    <navigator class="sortRankingRightBox">
+      <text class="icondel iconfont icon-detail"></text>
+    </navigator>
+  </view> 
+  <view class="historyBox">
+  <block wx:for="{{ historyList }}" wx:key="*this">
+    <navigator class="historyContent">{{ item.content }}</navigator>
+  </block>
+  </view>
+</view>

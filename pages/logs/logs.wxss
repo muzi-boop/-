@@ -1,6 +1,7 @@
 .container{
   background: #21272e;
 }
+
 .topBox{
   padding:  0 25rpx;
   background: #21272e;
@@ -19,20 +20,25 @@
   font-size: 30rpx;
   color: #fff;
 }
-.topBoxLista{
+.topBoxColor{
   color: #fff;
+}
+.topBoxLista{
   position: absolute;
   top: 25rpx;
   right: 27rpx;
-  font-size: 36rpx;
+  font-size: 34rpx;
 }
 .topBoxList{
-  color: #fff;
   position: absolute;
   top: 25rpx;
   right: 85rpx;
   font-size: 36rpx;
 }
+.active{
+  color: #71768c;
+}
+
 /* --------------- */
 .messageBox{
   margin-top: 100rpx;
@@ -86,4 +92,30 @@
 .alreadyRead{
   color: #fff;
   padding-bottom: 80rpx;
+}
+.boks{
+  display: none;
+}
+
+.messageIndexBox{
+  margin-top: 100rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.messageIndexBoxTo{
+  width: 268rpx;
+}
+.messageIndexImg{ 
+  width: 100%;
+  height: 400rpx;
+}
+.messageIndexBoxTitle{
+  padding-bottom: 30rpx;
+  margin-top: 20rpx;
+  width: 268rpx;
+  text-align: center;
+  color: #fff;
 }

@@ -17,8 +17,8 @@
 <block wx:for="{{ readBox }}" wx:key="*this">
 <navigator class="readA">
 <image class="readImg" src="{{ item.touxiang }}"></image>
-<view class="name">{{ item.name }}</view>
-<view class="title">{{ item.title }}</view>
+<view class="name">{{ item.bookname }}</view>
+<view class="title">{{ item.writername }}</view>
 </navigator>
 </block>
 </view>
@@ -35,8 +35,8 @@
 <block wx:for="{{ unreadBox }}" wx:key="*this">
 <navigator class="unreadA">
 <image class="unreadImg" src="{{ item.touxiang }}"></image>
-<view class="name">{{ item.name }}</view>
-<view class="title">{{ item.title }}</view>
+<view class="name">{{ item.bookname }}</view>
+<view class="title">{{ item.writername }}</view>
 </navigator>
 </block>
 </view>

@@ -65,7 +65,7 @@
   flex-direction:row; 
 }
 .readA{
-  width: 30%;
+  width: 192rpx;
   display: flex;
   flex-direction: column;
 }
@@ -101,9 +101,11 @@
   flex-wrap: wrap;
 }
 .unreadA{
-  width: 30%;
+  padding-bottom: 30rpx;
+  width: 192rpx;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .unreadImg{
   width: 192rpx;

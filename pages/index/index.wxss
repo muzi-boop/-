@@ -53,11 +53,16 @@
   font-size: 38rpx;
 }
 
+.searchUrl{
+  width: 100%;
+  line-height: 56rpx;
+  margin-left: 30rpx;
+  color: #aaa;
+}
 .searchInput{
   flex: 1;
   height: 56rpx;
   display: block;
-  line-height: 56rpx;
   color: #fff;
   border-top-right-radius: 48rpx;
   border-bottom-right-radius: 48rpx;
@@ -113,6 +118,7 @@
   padding-top: 30rpx;
   display: flex;
   flex-direction: column;
+  overflow: visible;
 }
 .titlea{
   color: #fff;
@@ -223,15 +229,17 @@
   padding: 30rpx;
 }
 .hotListJJTitle{
-  padding-bottom: 10rpx;
+  font-size: 36rpx;
+  padding-bottom: 30rpx;
 }
 .hotListJJName{
   font-size: 24rpx;
   border-bottom: 1px solid #2d353d;
-  padding-bottom: 10rpx;
+  padding-bottom: 20rpx;
   color: #5d637c;
 }
 .hotListJJContent{
+  font-size: 30rpx;
   width: 360rpx;
   color: #868dab;
   overflow: hidden;

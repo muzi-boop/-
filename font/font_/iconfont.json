@@ -6,11 +6,60 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "1817628",
+      "name": "信息",
+      "font_class": "xinxi",
+      "unicode": "e73c",
+      "unicode_decimal": 59196
+    },
+    {
+      "icon_id": "2577464",
+      "name": "心",
+      "font_class": "xin-",
+      "unicode": "e502",
+      "unicode_decimal": 58626
+    },
+    {
+      "icon_id": "4427415",
+      "name": "文档",
+      "font_class": "tubiaozhizuomobanyihuifu-",
+      "unicode": "e6a4",
+      "unicode_decimal": 59044
+    },
+    {
+      "icon_id": "5169051",
+      "name": "星星",
+      "font_class": "xingxing",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "6012847",
+      "name": "返回箭头",
+      "font_class": "fanhuijiantou",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
+      "icon_id": "6487636",
+      "name": "书架",
+      "font_class": "stake-copy-copy",
+      "unicode": "e50e",
+      "unicode_decimal": 58638
+    },
+    {
       "icon_id": "6902205",
       "name": "右",
       "font_class": "you",
       "unicode": "e670",
       "unicode_decimal": 58992
+    },
+    {
+      "icon_id": "7978614",
+      "name": "删 除",
+      "font_class": "detail",
+      "unicode": "e643",
+      "unicode_decimal": 58947
     },
     {
       "icon_id": "9015766",
@@ -39,6 +88,13 @@
       "font_class": "sifangkuai-shi",
       "unicode": "e88d",
       "unicode_decimal": 59533
+    },
+    {
+      "icon_id": "12532831",
+      "name": "分 享",
+      "font_class": "fenxiang",
+      "unicode": "e504",
+      "unicode_decimal": 58628
     }
   ]
 }
