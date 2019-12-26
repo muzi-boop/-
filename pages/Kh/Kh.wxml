@@ -1,0 +1,27 @@
+<!--pages/Kh/Kh.wxml-->
+<view class="container">
+  
+<view class="KhTopbox">
+<navigator class="KhTopboxLeft iconfont icon-fanhuijiantou" url="{{ Goback }}"></navigator>
+<text class="KhText">{{ conterTop }}</text>
+<navigator class="KhTopRight iconfont icon-Shapecopy-copy"></navigator>
+</view>
+<view class="Khcontent">
+<block wx:for="{{ KhText }}" wx:key="*this">
+<view class="hotListBoxwaft">
+  <view class="hotListBox">
+  <view class="hotListJJ">
+  <view class="hotListJJTitle">{{ item.bookname }}</view>
+  <view class="hotListJJName">{{ item.writername }}</view>
+  <view class="hotListJJContent">{{ item.about }}</view>
+  <navigator class="hotListDD iconfont icon-dian"></navigator>
+  </view>
+  </view>
+  <navigator class="hotListnav">
+  <image src="{{ item.touxiang }}" class="hotListImg"></image>
+  </navigator>
+  </view>
+</block>
+</view>
+
+</view>

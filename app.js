@@ -3,5 +3,6 @@ App({
   onLaunch: function () {
   },
   globalData: {
+    indexContent:null
   }
 })

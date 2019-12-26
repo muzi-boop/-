@@ -2,34 +2,39 @@
 const util = require('../../utils/util.js')
 Page({
   data: {
+    flag:true,
     topBoxTitle: "探索",
-    messageBox:[{
-      messageImg:"https://wujunhui.xyz/book-santi.png",
-      messagetitle:"三体：死神永生",
-      messageName:"刘慈欣",
-      alreadyRead:"457 人已阅读",
-      imga:"https://wujunhui.xyz/zz-wzj.png",
-      imgb:"https://wujunhui.xyz/zz-wzj.png",
-      imgc:"https://wujunhui.xyz/zz-wzj.png",
-      imgd:"https://wujunhui.xyz/zz-wzj.png",
-      messagea:"",
-      messageb:"",
-      messagec:"",
-      messaged:""
-    }, {
-        messageImg: "https://wujunhui.xyz/book-santi.png",
-        messagetitle: "三体：死神永生",
-        messageName: "刘慈欣",
-        alreadyRead: "457 人已阅读",
-        imga: "https://wujunhui.xyz/zz-wzj.png",
-        imgb: "https://wujunhui.xyz/zz-wzj.png",
-        imgc: "https://wujunhui.xyz/zz-wzj.png",
-        imgd: "https://wujunhui.xyz/zz-wzj.png",
-        messagea: "",
-        messageb: "",
-        messagec: "",
-        messaged: ""
-      }]
+    messageBox:[],
+    showinfo:[],
+  },
+  onLoad:function (){
+    wx.request({
+      url: 'https://wujunhui.xyz/getbooks',
+      success: (res)=>{
+        this.setData({
+          messageBox:res.data
+        })
+      }
+    });
+    wx.request({
+      url: 'https://wujunhui.xyz/getwriters',
+      success : (res) => {
+        this.setData({
+          showinfo: res.data.slice(3, 4)
+        })
+      }
+    })
+  },
+  click:function (event){
+    console.log(event)
+   this.setData({
+     flag: false,
+   })
+  },
+  clicks: function (){
+    this.setData({
+      flag: true
+    })
   }
 })
 

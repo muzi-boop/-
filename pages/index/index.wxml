@@ -7,7 +7,7 @@
   </view>
   <view class="search">
    <icon class="iconLefts iconfont icon-icon-search"></icon>
-    <input type="text" placeholder="搜索..." class="searchInput"></input>
+    <navigator class="searchUrl" url="{{ searchUrl }}">{{ searchText }}</navigator>
   </view>
   <!-- 搜索一下、皆为内容区域 -->
   <view class="sortRanking">
@@ -19,12 +19,12 @@
   <swiper vertical="{{ slidingDirection }}" class="Hswipper" circular="{{ circulars }}" display-multiple-items="{{ lengths }}">
   <block wx:for="{{date}}" wx:key="*this">
   <swiper-item class="swiperStyle">
-  <navigator url="{{item.http}}">
+  <navigator url="{{khurl[index]}}">
   <image class="imageSwipper" src="{{ item.touxiang }}" ></image>
   <text class="titlea">{{ item.type }}</text>
   </navigator>
   </swiper-item>
-    </block>
+  </block>
   </swiper>
   </view>
   <!-- 粘贴过来的 -->
@@ -55,10 +55,10 @@
   <!-- 六图区域 -->
   <view class="sixDiagramBox">
   <block wx:for="{{ sixDiagram }}" wx:key="*this">
-  <navigator url="{{ item.http }}" class="sixDiagramA">
-  <image src="{{ item.url }}" class="sixDiagramImg"></image>
-  <view class="sixDiagramTitle">{{ item.title }}</view>
-  <view class="sixDiagramName">{{ item.name }}</view>
+  <navigator url="/pages/BookDetail/bookDetail"bindtap="contentHttp" data-num="{{item}}" class="sixDiagramA">
+  <image src="{{ item.touxiang }}" class="sixDiagramImg"></image>
+  <view class="sixDiagramTitle">{{ item.bookname }}</view>
+  <view class="sixDiagramName">{{ item.writername }}</view>
   </navigator>
   </block>
   </view>
@@ -83,19 +83,19 @@
   <!-- swipper -->
   <!-- <view > -->
   <swiper class="hotBoxBOT" vertical="{{ slidingDirection }}"  circular="{{ circulars }}" display-multiple-items="{{ hotlengths }}">
-  <block wx:for="{{ hotListBox }}" wx:key="*this">
+  <block wx:for="{{ sixDiagram }}" wx:key="*this">
   <swiper-item>
   <view class="hotListBoxwaft">
   <view class="hotListBox">
   <view class="hotListJJ">
-  <view class="hotListJJTitle">{{ item.title }}</view>
-  <view class="hotListJJName">{{ item.name }}</view>
-  <view class="hotListJJContent">{{ item.content }}</view>
+  <view class="hotListJJTitle">{{ item.bookname }}</view>
+  <view class="hotListJJName">{{ item.writername }}</view>
+  <view class="hotListJJContent">{{ item.about }}</view>
   <navigator class="hotListDD iconfont icon-dian"></navigator>
   </view>
   </view>
   <navigator class="hotListnav">
-  <image src="{{ item.imgUrl }}" class="hotListImg"></image>
+  <image src="{{ item.touxiang }}" class="hotListImg"></image>
   </navigator>
   </view>
   </swiper-item>

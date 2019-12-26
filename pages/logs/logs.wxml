@@ -1,29 +1,53 @@
 <!--logs.wxml-->
 <view class="container">
 
-<view class="topBox">
-  <view class="topBoxTitle">{{ topBoxTitle }}</view>
-  <view class="topBoxLista iconfont icon-sign-blue"></view>
-  <view class="topBoxList iconfont icon-sifangkuai-shi"></view>
-</view>
-<!--  -->
-<block wx:for="{{ messageBox }}" wx:key="*this">
-<view class="messageBox">
-<navigator class="messageA">
-<image class="messageImg" src="{{ item.messageImg }}"></image>
-</navigator>
-<view class="messagetitle">{{ item.messagetitle }}</view>
-<view class="messageName">{{ item.messageName }}</view>
-<view class="iconBox">
-<navigator class="iconNav" url="{{item.messagea}}"> <image class="iconImg" src="{{item.imga}}"></image> </navigator>
-<navigator class="iconNav" url="{{item.messagea}}"> <image class="iconImg" src="{{item.imga}}"></image> </navigator>
-<navigator class="iconNav" url="{{item.messagea}}"> <image class="iconImg" src="{{item.imga}}"></image> </navigator>
-<navigator class="iconNav" url="{{item.messagea}}"> <image class="iconImg" src="{{item.imga}}"></image> </navigator>
-</view>
-<view class="alreadyRead">{{ item.alreadyRead }}</view>
-</view>
-</block>
-
-
+  <view class="topBox">
+    <view class="topBoxTitle">{{ topBoxTitle }}</view>
+    <view class="topBoxColor {{ flag ? 'active':'' }}"   bindtap="click" data-index="{{ item }}">
+      <view class="topBoxLista iconfont icon-sign-blue"></view>
+    </view>
+    <view class="topBoxColor {{ flag ? '':'active' }}" bindtap="clicks">
+      <view class="topBoxList iconfont icon-sifangkuai-shi"></view>
+    </view>
+  </view>
+  <!--flag  假 -->
+  <view hidden="{{ flag }}">
+   <block wx:for="{{ messageBox }}" wx:key="*this">
+      <view class="messageBox">
+        <navigator class="messageA">
+          <image class="messageImg" src="{{ item.touxiang }}"></image>
+        </navigator>
+        <view class="messagetitle">{{ item.bookname }}</view>
+        <view class="messageName">{{ item.messageName }}</view>
+        <view class="iconBox">
+        <!-- 后端接口数据 -->
+          <navigator class="iconNav" url="{{item.messagea}}">
+            <image class="iconImg" src="{{item.imga}}"></image>
+          </navigator>
+          <navigator class="iconNav" url="{{item.messagea}}">
+            <image class="iconImg" src="{{item.imga}}"></image>
+          </navigator>
+          <navigator class="iconNav" url="{{item.messagea}}">
+            <image class="iconImg" src="{{item.imga}}"></image>
+          </navigator>
+          <navigator class="iconNav" url="{{item.messagea}}">
+            <image class="iconImg" src="{{item.imga}}"></image>
+          </navigator>
+        </view>
+        <view class="alreadyRead">{{ item.alreadyRead }}</view>
+      </view>
+      </block>
+  </view>
+  <!-- flag 真 -->
+  <view hidden="{{ !flag }}">
+      <view class="messageIndexBox">
+       <block wx:for="{{ messageBox }}" wx:key="*this">
+        <view class="messageIndexBoxTo">
+          <image class="messageIndexImg" src="{{ item.touxiang }}" ></image>
+          <view class="messageIndexBoxTitle">{{ item.bookname }}</view>
+        </view>
+         </block>
+      </view>
+  </view>
 
 </view>

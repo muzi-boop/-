@@ -11,3 +11,6 @@
   padding: 0rpx 25rpx;
   box-sizing: border-box;
 } 
+page{
+  background: #21272e;
+}

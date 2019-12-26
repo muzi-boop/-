@@ -21,98 +21,16 @@ Page({
     hot: "热门搜索",
     hotListRanking: "热销榜",
     hotListRankingCKQB: "查看全部",
+    searchText:"搜索...",
     bordercolors: [],
-    date: [{
-      touxiang: "https://wujunhui.xyz/fenlei1.png",
-      http: "",
-      type: "科幻"
-    }, {
-      touxiang: "https://wujunhui.xyz/fenlei2.png",
-      http: "",
-      type: "生活"
-    }, {
-      touxiang: "https://wujunhui.xyz/fenlei3.png",
-      http: "",
-      type: "露营"
-    }, {
-      touxiang: "https://wujunhui.xyz/fenlei1.png",
-      http: "",
-      type: "职场"
-    }, {
-      touxiang: "https://wujunhui.xyz/fenlei2.png",
-      http: "",
-      type: "言情"
-    }, {
-      touxiang: "https://wujunhui.xyz/fenlei3.png",
-      http: "",
-      type: "艺术"
-    }, {
-      touxiang: "https://wujunhui.xyz/fenlei1.png",
-      http: "",
-      type: "军事"
-    }, {
-      touxiang: "https://wujunhui.xyz/fenlei2.png",
-      http: "",
-      type: "科学"
-    }],
-
-
-    author: [{
-      touxiang: "https://wujunhui.xyz/zz-lcx.png",
-      http: "",
-      name: "刘慈欣"
-    }, {
-        touxiang: "https://wujunhui.xyz/zz-txh.png",
-      name: "田小花"
-    }, {
-        touxiang: "https://wujunhui.xyz/zz-meks.png",
-      name: "马尔克斯"
-    }, {
-        touxiang: "https://wujunhui.xyz/fenlei1.png",
-      name: "余秋雨"
-    }, {
-        touxiang: "https://wujunhui.xyz/zz-wzj.png",
-      name: "王中军"
-    }],
-
-    sixDiagram: [{
-        http: "",
-        url: "https://wujunhui.xyz/book-santi.png",
-        title: "三体：死神永生",
-        name: "刘慈欣"
-      }, {
-        http: "",
-        url: "https://wujunhui.xyz/book-rljs.png",
-        title: "人类简史",
-        name: "尤瓦尔·郝拉利"
-      }, {
-        http: "",
-        url: "https://wujunhui.xyz/book-xsgmxj.png",
-        title: "许三观卖血记",
-        name: "余华"
-      },
-      {
-        http: "",
-        url: "https://wujunhui.xyz/book-wljs.png",
-        title: "未来简史",
-        name: "尤瓦尔·郝拉利"
-      }, {
-        http: "",
-        url: "https://wujunhui.xyz/book-zsdjy.png",
-        title: "自私的基因",
-        name: "理查德·道金斯"
-      }, {
-        http: "",
-        url: "https://wujunhui.xyz/book-bngd.png",
-        title: "百年孤独",
-        name: "马尔克斯"
-      }
-    ],
-
+    date: [],
+    author: [],
+    khurl:['/pages/Kh/Kh',''],
+    sixDiagram: [],
+    searchUrl:"/pages/Search/search",
     hotlist: [{
       title: "2018排行榜",
       http: "",
-      id: 1,
     }, {
         title: "职场热门",
       http: "",
@@ -129,28 +47,6 @@ Page({
         title: "2020清华大学录取线",
         http: "",
       }],
-
-    hotListBox: [{
-      imgUrl: " https://wujunhui.xyz/book-santi.png",
-      title: "三体：死神永生",
-      name: "作者：刘慈欣",
-      content: "刘慈欣创作的系列长篇科幻小说地球往事三部曲的第三部作品"
-    }, {
-      imgUrl: " https://wujunhui.xyz/book-wljs.png",
-      title: "未来简史",
-      name: "作者：刘慈欣",
-      content: "刘慈欣创作的系列长篇科幻小说地球往事三部曲的第三部作品"
-    }, {
-      imgUrl: " https://wujunhui.xyz/book-xcjs.png",
-      title: "乡村教师",
-      name: "作者：刘慈欣",
-      content: "刘慈欣创作的系列长篇科幻小说地球往事三部曲的第三部作品"
-    }, {
-      imgUrl: " https://wujunhui.xyz/book-pfdsj.png",
-      title: "平凡的世界",
-      name: "作者：刘慈欣",
-      content: "刘慈欣创作的系列长篇科幻小说地球往事三部曲的第三部作品"
-    }]
   },
 
   /**
@@ -158,13 +54,36 @@ Page({
    */
   onLoad: function() {
     var srr = this.bordercolor();
-    console.log(srr)
+    console.log(srr);
     this.setData({
       bordercolors: srr.sort((a, b) => {
         return Math.random() - 0.5;
       })
+    });
+    wx.request({
+      url: 'https://wujunhui.xyz/getfenleilist',
+      success: (res) =>{
+        this.setData({
+          date: res.data
+        })
+      }
+    });
+    wx.request({
+      url: 'https://wujunhui.xyz/getwriters',
+      success: (res) => {
+        this.setData({
+          author : res.data
+        })
+      }
+    });
+    wx.request({
+      url: 'https://wujunhui.xyz/getbooks',
+      success : (res) => {
+        this.setData({
+          sixDiagram: res.data.slice(0 , 6)
+        })
+      }
     })
-
   },
 
   /**
@@ -233,5 +152,10 @@ Page({
       arr.push(fun())
     }
     return arr;
+  },
+  contentHttp: function (event){
+    console.log(event) 
+      app.globalData.indexContent = event.currentTarget.dataset.num
+    console.log(app.globalData.indexContent)
   }
 })

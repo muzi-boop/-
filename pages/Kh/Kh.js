@@ -1,28 +1,24 @@
-// pages/books/books.js
+// pages/Kh/Kh.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    topBoxTitle: "书架",
-    readLeft: "正在阅读",
-    unreadLeft:"未读",
-    wholes: "查看全部",
-    readBox: [],
-    unreadBox: []
+    conterTop:"科幻",
+    KhText:[],
+    Goback:"/page/index/index",
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function() {
+  onLoad: function (options) {
     wx.request({
       url: 'https://wujunhui.xyz/getbooks',
-      success : (res) => {
+      success: (res) => {
         this.setData({
-          readBox: res.data.slice(0 , 3),
-          unreadBox: res.data.slice(0 , 12)
+          KhText: res.data
         })
       }
     })
@@ -31,49 +27,49 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function() {
+  onReady: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
+  onShow: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function() {
+  onHide: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function() {
+  onUnload: function () {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function() {
+  onPullDownRefresh: function () {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function() {
+  onReachBottom: function () {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function () {
 
   }
 })
