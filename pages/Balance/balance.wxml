@@ -1,0 +1,13 @@
+<!--pages/Balance/balance.wxml-->
+<view class="container">
+<view class="balanceBoxTop">
+<text class="balanText">{{ balanText }}</text>
+</view>
+<view class="balanceBox">
+  <view class="my">{{ my }}</view>
+  <view class="last">{{ last }}</view>
+</view>
+<navigator class="rechargeBox" url="/pages/Recharge/recharge">
+<view class="recharge">{{ recharge }}</view>
+</navigator>
+</view>

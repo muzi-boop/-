@@ -1,0 +1,29 @@
+<!--pages/Comment/comment.wxml-->
+<view class="container">
+<block wx:for="{{ comment }}" wx:key="*this">
+    <view class="commentContentBox">
+      <view class="commentContentBoxLeft">
+        <image class="commentContentBoxLeftImg" src="{{ item.img }}"></image>
+      </view>
+      <view class="commentContentBoxRight">
+        <view class="commentConSTitle">{{ item.nickName }}</view>
+        <view class="commentContText">{{ item.about }}</view>
+        <view class="commentContentBoxDown">
+          <view class="commentContentBoxDownLeft">{{ item.datas }}</view>
+          <view class="commentContentBoxDownRight">
+            <view class="commentContentBoxDownRightZ">
+            <icon class="commentContentBoxDownRightZIcon iconfont icon-xin-"></icon>
+            <text class="commentContentBoxDownRightZText">{{ item.num1 }}</text>
+            </view>
+            <view class="commentContentBoxDownRightY">
+            <icon class="commentContentBoxDownRightYIcon iconfont icon-xinxi"></icon>
+            <text class="commentContentBoxDownRightYText">{{ item.num2 }}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+  </view>
+
+

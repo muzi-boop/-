@@ -8,14 +8,29 @@ Page({
    * 页面的初始数据
    */
   data: {
+    stateX:false,
+    stateF:false,
+    stateS:false,
+    disK:false,
+    share:false,
     list:null,
+    closeShare:"/image/x.png",
+    pYq:"/image/pengyouquan.png",
+    kJ:"/image/kongjian.png",
+    vB:"/image/weibo.png",
+    qQ:"/image/QQ.png",
+    libOk:"好的",
+    libarText:"已经将这本书加入到个人书架",
     collection:"收藏",
-    share:"分享",
+    shAre:"分享",
     book:"书籍",
     detail:"详情",
     cataLeft:"查看目录",
     commmentLeftText:"评论",
     commmentLeftA:"215 条评论",
+    bookBottomLeft:"试看",
+    bookBottomright:"购买",
+    commentA:"/pages/Comment/comment",
     comment:[{
       img:"https://wujunhui.xyz/zz-zdh.png",
       nickName:"你个废物",
@@ -82,5 +97,31 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  collXClick: function (){
+    this.setData({
+      stateX : !this.data.stateX
+    })
+  },
+  collFClick : function (){
+    this.setData({
+      share: true
+    })
+  },
+  collSClick:function () {
+    this.setData({
+      disK : true
+    })
+  },
+  libarOk: function (){
+    this.setData({
+      disK:false
+    })
+  },
+  shareBox: function (){
+    this.setData({
+      share: false
+    })
   }
 })

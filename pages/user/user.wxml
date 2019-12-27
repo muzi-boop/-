@@ -1,2 +1,66 @@
 <!--pages/user/user.wxml-->
-<text>pages/user/user.wxml</text>
+<view class="container">
+  <!-- 标题 -->
+  <view class="userBoxTop">
+    <view class="userMy">{{ my }}</view>
+    <icon class="userSet iconfont icon-shezhi"></icon>
+  </view>
+
+  <view class="unsigninBox" hidden="{{ signin }}" bindtap="signinClick">
+    <view class="unsignin">{{ unsignin }}</view>
+  </view>
+
+  <!-- 登录 -->
+  <view hidden="{{ !signin }}">
+  <view class="signinBox" >
+    <image class="signinBoxImg" src="{{ list.touxiang }}"></image>
+    <view class="signinBoxRight">
+    <view class="signinBoxRightName">{{ list.name }}</view>
+    <view class="signinBoxRightHome">{{ list.country }} · {{ list.city }}</view>
+    <view class="shareBox">
+    <icon class="shareBoxIcon iconfont icon-fenxiang"></icon><text class="shareBoxText">{{ shareFX }}</text>
+    </view>
+    </view>
+  </view>
+<!-- 第二板块 -->
+
+<view class="levelBox">
+<view class="followBox">
+<view class="followPage">{{ followPage }}</view>
+<view class="follow">{{ follow }}</view>
+</view>
+<view class="fansBox">
+<view class="fansPage">{{ followPage }}</view>
+<view class="fans">{{ fans }}</view>
+</view>
+<view class="likeBox">
+<view class="likePage">{{ followPage }}</view>
+<view class="like">{{ like }}</view>
+</view>
+</view>
+<!-- 访达 -->
+<navigator class="personalInformationBox">
+<view class="personalInformation">{{ personalInformation }}</view>
+<icon class="goIcon iconfont icon-you"></icon>
+</navigator>
+
+<!-- 2 -->
+<navigator class="personalInformationBox">
+<view class="personalInformation">{{ myNews }}</view>
+<view class="myNews">{{ myNewsText }}</view>
+</navigator>
+<!-- 3 -->
+<navigator class="personalInformationBox" url="/pages/Balance/balance">
+<view class="personalInformation">{{ accountBalance }}</view>
+<view >
+<text class="goText">{{ goText }}</text>
+<icon class="goIcon iconfont icon-you"></icon>
+</view>
+</navigator>
+<!-- 4 -->
+<navigator class="personalInformationBox">
+<view class="personalInformation">{{ myComments }}</view>
+<icon class="goIcon iconfont icon-you"></icon>
+</navigator>
+</view> 
+</view>

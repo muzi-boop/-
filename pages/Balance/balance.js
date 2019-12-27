@@ -1,42 +1,21 @@
-// pages/user/user.js
+// pages/Balance/balance.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    signin:false,
-    my:"我的",
-    unsignin:"请登录",
-    list:[],
-    shareFX:"分享",
-    follow:"关注",
-    like:"喜欢",
-    fans:"粉丝",
-    followPage:"1286",
-    likePage:"6673",
-    fansPage:"3368",
-    personalInformation:"个人信息",
-    myNews:"我的消息",
-    accountBalance:"账户余额",
-    myComments:"我的评论",
-    myNewsText:6,
-    goText:"1375.00",
+    balanText:"账户余额",
+    my:"我的余额(元)",
+    last:"1375.00",
+    recharge:"充值"
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.request({
-      url: 'https://wujunhui.xyz/getwriters',
-      success: (res) => {
-        console.log(res)
-        this.setData({
-          list: res.data[0]
-      })
-      }
-    })
+
   },
 
   /**
@@ -86,10 +65,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  signinClick: function (){
-    this.setData({
-      signin: true
-    })
   }
 })
