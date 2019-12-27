@@ -2,11 +2,14 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/books/books",
+    "pages/books/books", 
     "pages/user/user",
     "pages/Kh/Kh",
     "pages/Search/search",
-    "pages/BookDetail/bookDetail"
+    "pages/BookDetail/bookDetail",
+    "pages/Comment/comment",
+    "pages/Balance/balance",
+      "pages/Recharge/recharge"
   ],
   "window": {
     "backgroundTextStyle": "light",

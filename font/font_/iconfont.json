@@ -20,11 +20,25 @@
       "unicode_decimal": 58626
     },
     {
+      "icon_id": "3286178",
+      "name": "设置",
+      "font_class": "shezhi",
+      "unicode": "e503",
+      "unicode_decimal": 58627
+    },
+    {
       "icon_id": "4427415",
       "name": "文档",
       "font_class": "tubiaozhizuomobanyihuifu-",
       "unicode": "e6a4",
       "unicode_decimal": 59044
+    },
+    {
+      "icon_id": "4571558",
+      "name": "列表",
+      "font_class": "Shapecopy-copy",
+      "unicode": "e504",
+      "unicode_decimal": 58628
     },
     {
       "icon_id": "5169051",
@@ -62,6 +76,13 @@
       "unicode_decimal": 58947
     },
     {
+      "icon_id": "8864514",
+      "name": "指纹",
+      "font_class": "zhiwen",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
       "icon_id": "9015766",
       "name": "方块",
       "font_class": "sign-blue",
@@ -93,8 +114,8 @@
       "icon_id": "12532831",
       "name": "分 享",
       "font_class": "fenxiang",
-      "unicode": "e504",
-      "unicode_decimal": 58628
+      "unicode": "e505",
+      "unicode_decimal": 58629
     }
   ]
 }

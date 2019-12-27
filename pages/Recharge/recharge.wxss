@@ -1,0 +1,175 @@
+/* pages/Recharge/recharge.wxss */
+
+.rechargeBoxTop {
+  width: 100%;
+  height: 96rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rechargeBoxTopText {
+  font-size: 36rpx;
+  color: #fff;
+}
+
+.rechargeBox {
+  width: 100%;
+  height: 320rpx;
+  border-radius: 20rpx;
+  background: #2b323b;
+  padding: 40rpx;
+  box-sizing: border-box;
+}
+
+.recharge {
+  font-size: 36rpx;
+  color: #75808d;
+  padding-bottom: 30rpx;
+}
+
+.Rmb {
+  height: 140rpx;
+  color: #fff;
+  font-size: 110rpx;
+}
+
+.rechargeInput {
+  width: 100%;
+  height: 140rpx;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  border-bottom: 2px solid #434e5c;
+  align-items: baseline;
+}
+
+input {
+  font-size: 60rpx;
+  color: #fff;
+  flex: 1;
+  height: 100rpx;
+  padding-left: 30rpx;
+}
+
+.nextBox {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 140rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2e363f;
+}
+
+.next {
+  font-size: 36rpx;
+  color: #fff;
+}
+
+/*  */
+
+.payStyle {
+  box-sizing: border-box;
+  padding: 40rpx 40rpx 0px 40rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 600rpx;
+  background: #2d353f;
+  display: flex;
+  flex-direction: column;
+}
+
+.confrim {
+  font-size: 36rpx;
+  color: #75808d;
+}
+
+.confrimRmb {
+  font-size: 90rpx;
+  color: #fff;
+  padding: 30rpx 0;
+}
+
+.order {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  border-bottom: 1px solid #333c47;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.orderinfor {
+  line-height: 100rpx;
+  color: #dcdeea;
+  font-size: 34rpx;
+}
+
+.recharges {
+  line-height: 100rpx;
+  color: #dcdeea;
+  font-size: 28rpx;
+}
+
+.bank {
+  height: 100rpx;
+}
+
+.bankStyle {
+  color: #636c77;
+  line-height: 100rpx;
+  font-size: 28rpx;
+}
+
+.bankNumB {
+  color: #636c77;
+  line-height: 100rpx;
+}
+
+.bankIcon {
+  font-size: 28rpx;
+  color: #a2a8ba;
+  margin-left: 20rpx;
+  line-height: 100rpx;
+}
+
+.payState {
+  width: 100%;
+  height: 140rpx;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.payStateIcon {
+  padding-right: 20rpx;
+  color: #545f6c;
+  font-size: 80rpx;
+  line-height: 140rpx;
+}
+.img{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  position: absolute;
+  top: 40rpx;
+  right: 40rpx;
+}
+.payStateTExt {
+  font-size: 28rpx;
+  color: #636c77;
+  line-height: 140rpx;
+}
+
+.payStateA {
+  font-size: 28rpx;
+  padding-left: 10rpx;
+  color: #fb6894;
+  line-height: 140rpx;
+}

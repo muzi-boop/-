@@ -3,7 +3,7 @@
   <image class="bookLeftBox" src="{{ list.touxiang }}"></image>
   <view class="bookLeftToBox">
     <view class="bookTitle">{{ list.bookname }}</view>
-    <view class="bookName">作者:{{ list.writername }}</view>
+    <view class="bookName">作者: {{ list.writername }}</view>
     <view class="bookAbout">{{ list.about }}</view>
     <view class="bookScore">
       <icon class="bookIcon iconfont icon-xingxing"></icon>
@@ -18,15 +18,15 @@
 <!--  -->
 <view class="bookContentStyle">
   <view class="bookChoice">
-    <view class="iconsBox">
-      <icon class="iconX iconfont icon-xin-"></icon>
+    <view class="iconsBox" bindtap="collXClick">
+      <icon class="{{ stateX ?  'actiove':'iconX' }} iconfont icon-xin-"></icon>
       <text class="bookCollection">{{ collection }}</text>
     </view>
-    <view class="iconsBox ">
+    <view class="iconsBox " bindtap="collFClick">
       <icon class="iconF iconfont icon-fenxiang"></icon>
-      <text class="share">{{ share }}</text>
+      <text class="share">{{ shAre }}</text>
     </view>
-    <view class="iconsBox">
+    <view class="iconsBox" bindtap="collSClick">
       <icon class="iconS iconfont icon-stake-copy-copy"></icon>
       <text class="book">{{ book }}</text>
     </view>
@@ -46,7 +46,7 @@
   <view class="comment">
     <view class="commmentLeft">
       <text class="commmentLeftText">{{ commmentLeftText }}</text>
-      <navigator class="commmentLeftA">{{ commmentLeftA }}</navigator>
+      <navigator class="commmentLeftA" url="{{ commentA }}" >{{ commmentLeftA }}</navigator>
     </view>
     <icon class="commentRight iconfont icon-tubiaozhizuomobanyihuifu-"></icon>
   </view>
@@ -77,8 +77,28 @@
   </block>
 
 
+<view class="bookBottom"> 
+<view class="bookBottomLeft">{{ bookBottomLeft }}</view>
+<navigator class="bookBottomright">{{ bookBottomright }}</navigator>
+</view>
+
+<view hidden="{{ !disK }}" class="liberBox">
+  <view class="libarConter">
+  <image class="libarimg" src="{{ list.touxiang }}"></image>
+  <view class="libarText">{{ libarText }}</view> 
+  <view class="lIbOk" bindtap="libarOk">{{ libOk }}</view>
+  </view>
+</view>
 
 
+</view>
 
-
+<view class="sharebox" hidden="{{ !share }}">
+<image class="shareI" bindtap="shareBox" src="{{ closeShare }}"></image>
+<view class="shareStyle">
+<image class="shareStyleImg" src="{{ pYq }}"></image>
+<image class="shareStyleImg" src="{{ kJ }}"></image>
+<image class="shareStyleImg" src="{{ vB }}"></image>
+<image class="shareStyleImg" src="{{ qQ }}"></image>
+</view>
 </view>

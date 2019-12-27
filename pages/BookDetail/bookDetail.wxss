@@ -54,11 +54,12 @@
   color: #ffce44;
   margin-left: 10rpx;
 }
-
+ 
 .bookContentStyle {
   margin-top: 60rpx;
   padding: 0 25rpx;
   box-sizing: border-box;
+  margin-bottom: 130rpx;
 }
 
 .bookChoice {
@@ -180,7 +181,7 @@
 }
 
 .commentContentBox {
-  margin-bottom: 30rpx;
+  margin-bottom: 60rpx;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -253,3 +254,113 @@
   margin-left: 16rpx;
  font-size: 26rpx;
 }
+
+.bookBottom{
+  width: 100%;
+  height: 110rpx;
+  display: flex;
+  background: #373a49;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.bookBottomLeft{
+  font-size: 28rpx;
+  width: 216rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-radius: 45rpx;
+  background: #9295a9;
+  color: #fff;
+  text-align: center;
+}
+.bookBottomright{
+  font-size: 28rpx;
+  text-align: center;
+  width: 422rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  background: #fb6894;
+  color: #fff;
+  border-radius: 45rpx;
+}
+
+.actiove{
+  color: #ea392f;
+}
+
+.liberBox{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rhba(13,16,18,.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.libarConter{
+  width: 550rpx;
+  height: 766rpx;
+  border-radius: 20rpx;
+  background: #373a48;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.libarimg{
+  height: 320rpx;
+  width: 216rpx;
+}
+.libarText{
+  margin-top: 40rpx;
+  color: #fff;
+  font-size: 30rpx;
+}
+.lIbOk{
+  margin-top: 40rpx;
+  font-size: 28rpx;
+  color: #fff;
+  width: 422rpx;
+  height: 94rpx;
+  background: #fb6894;
+  border-radius: 47rpx;
+  text-align: center;
+  line-height: 94rpx;
+}
+
+.sharebox{
+  z-index: 10;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 340rpx;
+  background: #2d353f;
+}
+
+.shareStyle{
+  height: 340rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.shareStyleImg{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+}
+.shareI{
+  position: absolute;
+  top: 50rpx;
+  right: 32rpx;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 40rpx;
+  }

@@ -1,42 +1,33 @@
-// pages/user/user.js
+// pages/Recharge/recharge.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    signin:false,
-    my:"我的",
-    unsignin:"请登录",
-    list:[],
-    shareFX:"分享",
-    follow:"关注",
-    like:"喜欢",
-    fans:"粉丝",
-    followPage:"1286",
-    likePage:"6673",
-    fansPage:"3368",
-    personalInformation:"个人信息",
-    myNews:"我的消息",
-    accountBalance:"账户余额",
-    myComments:"我的评论",
-    myNewsText:6,
-    goText:"1375.00",
+    focus:true,
+    rechargeBoxTopText:"充值",
+    recharge:"充值余额(元)",
+    rmb:"￥",
+    confrim:"确认付款(元)",
+    next:"支付",
+    inputVal:"",
+    bankStyle:"中国银行卡",
+    bankNumB:"0288",
+    recharges:"充值",
+    raymet:"付款方式",
+    payStateTExt:"指纹验证或",
+    payStateA:"输入密码",
+    confrimRmb:"250.00",
+    orderinfor:"订单信息",
+    payBox: true
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.request({
-      url: 'https://wujunhui.xyz/getwriters',
-      success: (res) => {
-        console.log(res)
-        this.setData({
-          list: res.data[0]
-      })
-      }
-    })
+
   },
 
   /**
@@ -87,9 +78,19 @@ Page({
   onShareAppMessage: function () {
 
   },
-  signinClick: function (){
+  pay: function (){
     this.setData({
-      signin: true
+      payBox: false
+    })
+  },
+  vv (e){
+    this.setData({
+      inputVal: e.detail.value 
+    })
+  },
+  over (){
+    this.setData({
+      payBox: true
     })
   }
 })

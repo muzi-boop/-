@@ -1,0 +1,52 @@
+/* pages/Balance/balance.wxss */
+
+.balanceBox {
+  width: 100%;
+  height: 320rpx;
+  border-radius: 20rpx; 
+  background: #2b323b;
+  padding: 40rpx;
+  box-sizing: border-box;
+}
+
+.balanceBoxTop {
+  width: 100%;
+  height: 96rpx;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.balanText {
+  font-size: 36rpx;
+  color: #fff;
+  line-height: 96rpx;
+}
+
+.my{
+  font-size: 36rpx;
+  color: #75808d;
+  padding-bottom: 40rpx;
+}
+.last{
+  color: #fff;
+  font-size: 80rpx;
+  flex: 1;
+}
+
+.rechargeBox{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #fb6894;
+  width: 100%;
+  box-sizing: border-box;
+  height: 142rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.recharge{
+  font-size: 36rpx;
+  color: #fff;
+}

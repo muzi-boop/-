@@ -1,0 +1,42 @@
+<!--pages/Recharge/recharge.wxml-->
+<view class="container">
+
+<view class="rechargeBoxTop">
+<text class="rechargeBoxTopText">{{ rechargeBoxTopText }}</text>
+</view>
+<!--  -->
+<view class="rechargeBox">
+<view class="recharge">{{ recharge }}</view>
+<view class="rechargeInput">
+<text class="Rmb">{{ rmb }}</text>
+<input type="number" focus="{{focus}}" bindinput="vv" value="{{ inputVal }}"></input>
+</view>
+</view>
+<!--  -->
+<view class="nextBox" bindtap="pay" hidden="{{ !payBox }}"> 
+<text class="next">{{ next }}</text>
+</view>
+
+<view class="payStyle" hidden="{{ payBox }}">
+<view class="confrim">{{ confrim }}</view>
+<view class="confrimRmb">{{ inputVal }}</view>
+<view class="order">
+<text class="orderinfor">{{ orderinfor }}</text><text class="recharges">{{ recharges }}</text>
+</view>
+<view class="order">
+<text class="orderinfor">{{ raymet }}</text>
+<view class="bank">
+<text class="bankStyle">{{ bankStyle }}</text>
+<text class="bankNumB">({{ bankNumB }})</text>
+<icon class="bankIcon  iconfont icon-you"></icon>
+</view>
+</view>
+<view class="payState">
+<icon class="payStateIcon iconfont icon-zhiwen"></icon>
+<text class="payStateTExt">{{ payStateTExt }}</text>
+<text class="payStateA">{{ payStateA }}</text>
+<image class="img" bindtap="over" src="/image/x.png"></image>
+</view>
+</view>
+
+</view>
