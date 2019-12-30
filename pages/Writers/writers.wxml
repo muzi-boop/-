@@ -1,0 +1,79 @@
+<!--pages/Writers/writers.wxml-->
+<view class="container">
+  <!-- 页头 -->
+  <view class="writersatop">
+    <text class="writerStyle">作者</text>
+  </view>
+  <!-- 排行 -->
+  <view class="scortBox">
+    <view class="scortTwo">
+      <image class="scortImgTwo" src="/image/huangguan2.png"></image>
+      <image class="scorttouxiang" src="{{ last[1].touxiang }}"></image>
+      <view class="numb2">2</view>
+      <view class="scortWriter">{{last[1].name}}</view>
+      <view class="scortlist">{{ last[1].likes }} 粉丝</view>
+    </view>
+    <view class="scortnumbOne">
+      <image class="scortImgOne" src="/image/huangguan1.png"></image>
+      <navigator url="/pages/Authordetailspage/authordetailspage"><image class="scortOnetouxiang" src="{{ last[0].touxiang }}"></image></navigator>
+      <view class="numb1">1</view>
+      <view class="scortOneWriter">{{last[0].name}}</view>
+      <view class="scortOnelist">{{ last[0].likes }} 粉丝</view>
+    </view>
+    <view class="scortTren">
+      <image class="scortImgTwo" src="/image/huangguan3.png"></image>
+      <image class="scorttouxiang" src="{{ last[2].touxiang }}"></image>
+      <view class="numb3">3</view>
+      <view class="scortTreeWriter">{{last[2].name}}</view>
+      <view class="scortTreelist">{{ last[2].likes }} 粉丝</view>
+    </view>
+  </view>
+  <!--  -->
+  <view class="sortRanking">
+    <text class="sortBox">热门作者</text>
+    <navigator class="sortRankingRightBox">
+      <text class="CKQB">查看全部</text>
+      <text class="iconYou iconfont icon-you"></text> </navigator>
+  </view>
+  <!--  -->
+<view class="swipperBox">
+  <swiper vertical="{{ slidingDirection }}" class="Hswipper" circular="{{ circulars }}" display-multiple-items="{{ lengths }}">
+  <block wx:for="{{last}}" wx:key="*this">
+  <swiper-item class="swiperStyle">
+  <navigator url="{{khurl[index]}}">
+  <image class="imageSwipper" src="{{ item.touxiang }}" ></image>
+  <view class="titlea">{{ item.name }}</view> 
+  </navigator>
+  <view class="follow">+关注</view>
+  </swiper-item>
+  </block>
+  </swiper>
+  </view>
+
+<!-- 333 -->
+  <!--  -->
+  <view class="sortRanking">
+    <text class="sortBox">热门作者</text>
+    <navigator class="sortRankingRightBox">
+      <text class="CKQB">查看全部</text>
+      <text class="iconYou iconfont icon-you"></text> </navigator>
+  </view>
+  <!--  -->
+<view class="swipperBox">
+  <swiper vertical="{{ slidingDirection }}" class="Hswipper" circular="{{ circulars }}" display-multiple-items="{{ lengths }}">
+  <block wx:for="{{last}}" wx:key="*this">
+  <swiper-item class="swiperStyle">
+  <navigator url="{{khurl[index]}}">
+  <image class="imageSwipper" src="{{ item.touxiang }}" ></image>
+  <view class="titlea">{{ item.name }}</view> 
+  </navigator>
+  <view class="follow">+关注</view>
+  </swiper-item>
+  </block>
+  </swiper>
+  </view>
+
+
+
+
+</view>

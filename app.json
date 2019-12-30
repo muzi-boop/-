@@ -9,7 +9,12 @@
     "pages/BookDetail/bookDetail",
     "pages/Comment/comment",
     "pages/Balance/balance",
-      "pages/Recharge/recharge"
+    "pages/Recharge/recharge",
+    "pages/setbox/setbok",
+    "pages/Mycart/mycart",
+    "pages/Writers/writers",
+   "pages/Authordetailspage/authordetailspage",
+   "pages/Classify/classify"
   ],
   "window": {
     "backgroundTextStyle": "light",
