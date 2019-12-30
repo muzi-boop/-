@@ -1,0 +1,213 @@
+/* pages/Authordetailspage/authordetailspage.wxss */
+
+.signinBox {
+  width: 100%;
+  height: 240rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.follows{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 200rpx;
+  height: 62rpx;
+  border-radius: 10rpx;
+  background: #478ce0;
+  text-align: center;
+  line-height: 60rpx;
+  color: #fff;
+}
+.signinBoxImg {
+  width: 240rpx;
+  height: 240rpx;
+  border-radius: 50%;
+}
+
+.signinBoxRight {
+  position: relative;
+  padding-left: 30rpx;
+  flex: 1;
+  height: 240rpx;
+}
+
+.signinBoxRightName {
+  padding-top: 30rpx;
+  font-size: 36rpx;
+  color: #fff;
+}
+
+.signinBoxRightHome {
+  padding: 18rpx 0 30rpx 0;
+  font-size: 28rpx;
+  color: #9497ab;
+  border-bottom: 1px solid #9497ab;
+}
+
+.shareBox {
+  text-align: center;
+  position: absolute;
+  right: 230rpx;
+  bottom: 0rpx;
+  width: 200rpx;
+  height: 60rpx;
+  border-radius: 10rpx;
+  border: 1px solid #9497ab;
+}
+
+.shareBoxText {
+  padding-left: 20rpx;
+  line-height: 60rpx;
+  font-size: 24rpx;
+  color: #9497ab;
+}
+
+.shareBoxIcon {
+  font-size: 24rpx;
+  line-height: 60rpx;
+  color: #9497ab;
+}
+
+.levelBox {
+  margin-top: 40rpx;
+  width: 100%;
+  box-sizing: border-box;
+  height: 126rpx;
+  border-radius: 20rpx;
+  background: #2b323b;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.followBox {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.followPage{
+  font-size: 32rpx;
+  color: #fff;
+}
+.follow{
+  font-size: 24rpx;
+  color: #75808d;
+}
+.fansBox {
+  border-left: 1px solid #363c45;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.fansPage{
+font-size: 32rpx;
+  color: #fff;
+}
+.fans{
+ font-size: 24rpx;
+  color: #75808d;
+}
+.likeBox {
+  border-left: 1px solid #363c45;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.likePage{
+font-size: 32rpx;
+  color: #fff;
+}
+.like{
+ font-size: 24rpx;
+  color: #75808d;
+}
+.personalInformationBox{
+  width: 100%;
+  height: 140rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+.personalInformation{
+  line-height: 140rpx;
+  font-size: 36rpx;
+  color:#dcdeea;
+}
+.goIcon{
+  color: #dcdeea;
+  line-height: 140rpx;
+  font-size: 24rpx;
+}
+.myNews{
+  line-height: 50rpx;
+  color: #478ce0;
+  text-align: center;
+  font-size: 24rpx;
+}
+
+
+
+.bookDetailBox {
+  margin-top: 30rpx;
+  box-sizing: border-box;
+  padding: 10rpx 25rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  border-bottom: 1px solid #363c45;
+}
+
+.bookLeftBox {
+  width: 216rpx;
+  height: 320rpx;
+}
+
+.bookLeftToBox {
+  padding-left: 20rpx;
+  width: 484rpx;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.bookTitle {
+  padding-top: 30rpx;
+  font-size: 36rpx;
+  color: #fff;
+}
+
+.bookName {
+  padding-top: 20rpx;
+  font-size: 24rpx;
+  color: #478ce0;
+}
+
+.bookAbout {
+  padding-top: 20rpx;
+  color: #828d9a;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.bookScore {
+  margin-top: 20rpx;
+}
+
+.bookIcon {
+  color: #fb6894;
+}
+
+.bookIconText {
+  color: #ffce44;
+  margin-left: 10rpx;
+}

@@ -2,7 +2,7 @@
 <view class="container">
 <view class="topBox">
   <view class="topBoxTitle">{{ topBoxTitle }}</view>
-  <view class="topBoxList iconfont icon-Shapecopy-copy"></view>
+  <navigator class="topBoxList iconfont icon-Shapecopy-copy" url="/pages/Mycart/mycart"></navigator>
 </view>
 
 <view class="readingBox">

@@ -30,7 +30,7 @@
   <!-- 粘贴过来的 -->
   <view class="sortRanking">
   <text class="sortBox">{{ authorRanking }}</text>
-  <navigator class="sortRankingRightBox"><text class="CKQB">{{authorRankingCKQB}}</text> <text class="iconYou iconfont icon-you"></text>      </navigator>
+  <navigator url="/pages/Writers/writers" class="sortRankingRightBox"><text class="CKQB">{{authorRankingCKQB}}</text> <text class="iconYou iconfont icon-you"></text>      </navigator>
   </view>
   <!-- 轮播图 -->
   <view class="swipperBox">

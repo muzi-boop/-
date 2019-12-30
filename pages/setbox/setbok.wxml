@@ -1,0 +1,46 @@
+<!--pages/setbox/setbok.wxml-->
+
+<view class="container">
+  <view class="settitlebox">
+    <text class="settitleText">设置</text>
+  </view>
+  <!-- 查看账户 -->
+  <navigator class="personalInformationBox">
+    <view class="personalInformation">查看账户</view>
+    <icon class="goIcon iconfont icon-you"></icon>
+  </navigator>
+<!-- 个人资料 -->
+<navigator class="personalInformationBox">
+    <view class="personalInformation">个人资料</view>
+    <icon class="goIcon iconfont icon-you"></icon>
+  </navigator>
+<!-- 消息提醒 -->
+<view class="personalInformationBox">
+<view class="personalInformation">消息提醒</view>
+<view>
+<switch checked="{{switch1Checked}}" color="#fb6894" bindchange="switch1Change"/>
+</view>
+</view>
+<!-- 清理缓存 -->
+<navigator class="personalInformationBox">
+<view class="personalInformation">清理缓存</view>
+<view >
+<text class="goText">{{ goText }}</text>
+<icon class="goIcon iconfont icon-you"></icon>
+</view>
+</navigator>
+<!-- 帮助中心 -->
+<navigator class="personalInformationBox">
+    <view class="personalInformation">帮助中心</view>
+    <icon class="goIcon iconfont icon-you"></icon>
+  </navigator>
+  <!-- 关于我们 -->
+  <navigator class="personalInformationBox">
+    <view class="personalInformation">关于我们</view>
+    <icon class="goIcon iconfont icon-you"></icon>
+  </navigator>
+
+  <view class="setDownBox">
+   <text class="exit">退出登录</text>
+  </view>
+</view>

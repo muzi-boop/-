@@ -1,0 +1,58 @@
+<!--pages/Classify/classify.wxml-->
+<view class="container">
+<view class="fengleiText">
+
+<view class="classifyBox">
+<text class="classify">分类</text>
+</view>
+<!-- ------------------ -->
+<view class="search">
+   <icon class="iconLefts iconfont icon-icon-search"></icon>
+    <navigator class="searchUrl" url="{{ searchUrl }}">{{ searchText }}</navigator>
+</view>
+<!-- ---------------- -->
+<swiper display-multiple-items="{{num}}" circular="{{ is }}"  class="swp">
+<block wx:for="{{ list }}" wx:key="*this">
+<swiper-item class="{{aa == index ? 'active' : 'sepIt'}}" data-a="{{index}}" bindtap="click">{{ item.type }}
+</swiper-item>
+</block> 
+</swiper>
+
+<!--  -->
+ <view class="sortRanking">
+  <text class="sortBox">{{sortRanking}}</text>
+  <navigator class="sortRankingRightBox"><text class="CKQB">{{sortRankingCKQB}}</text>    <text class="iconYou iconfont icon-you"></text>      </navigator>
+  </view>
+<!--  -->
+ <view class="sixDiagramBox">
+  <block wx:for="{{ sixDiagram }}" wx:key="*this">
+  <navigator url="/pages/BookDetail/bookDetail"bindtap="contentHttp" data-num="{{item}}" class="sixDiagramA">
+  <image src="{{ item.touxiang }}" class="sixDiagramImg"></image>
+  <view class="sixDiagramTitle">{{ item.bookname }}</view>
+  <view class="sixDiagramName">{{ item.writername }}</view>
+  </navigator>
+  </block>
+  </view>
+<!--  -->
+<!--  -->
+<!--  -->
+ <view class="sortRanking">
+  <text class="sortBox">热门</text>
+  <navigator class="sortRankingRightBox"><text class="CKQB">查看全部</text>    <text class="iconYou iconfont icon-you"></text>      </navigator>
+  </view>
+<!--  -->
+ <view class="sixDiagramBox">
+  <block wx:for="{{ sixDiagrams }}" wx:key="*this">
+  <navigator url="/pages/BookDetail/bookDetail"bindtap="contentHttp" data-num="{{item}}" class="sixDiagramA">
+  <image src="{{ item.touxiang }}" class="sixDiagramImg"></image>
+  <view class="sixDiagramTitle">{{ item.bookname }}</view>
+  <view class="sixDiagramName">{{ item.writername }}</view>
+  </navigator>
+  </block>
+  </view>
+
+
+
+
+</view>
+</view>

@@ -3,7 +3,8 @@
   <!-- 标题 -->
   <view class="userBoxTop">
     <view class="userMy">{{ my }}</view>
-    <icon class="userSet iconfont icon-shezhi"></icon>
+    <navigator url="/pages/setbox/setbok">
+    <icon class="userSet iconfont icon-shezhi" ></icon></navigator>
   </view>
 
   <view class="unsigninBox" hidden="{{ signin }}" bindtap="signinClick">

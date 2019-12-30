@@ -1,0 +1,138 @@
+/* pages/Classify/classify.wxss */
+
+.classifyBox{
+width: 100%;
+height: 96rpx;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.classify{
+font-size: 36rpx;
+color: #fff;
+}
+
+
+
+.search{
+  width: 90%;
+  height: 96rpx;
+  border-radius: 48px;
+  background: #2d353d;
+  box-sizing: border-box;
+  padding: 20rpx 0 ;
+  display: flex;
+  margin: 0 auto;
+}
+
+.iconLefts{
+  line-height: 56rpx;
+  padding-left: 40rpx;
+  color: #fff;
+  font-size: 38rpx;
+}
+
+.searchUrl{
+  width: 100%;
+  line-height: 56rpx;
+  margin-left: 30rpx;
+  color: #aaa;
+}
+.searchInput{
+  flex: 1;
+  height: 56rpx;
+  display: block;
+  color: #fff;
+  border-top-right-radius: 48rpx;
+  border-bottom-right-radius: 48rpx;
+  padding: 0 30rpx;
+}
+
+.swp{
+  width: 100%;
+  box-sizing: border-box;
+  height: 120rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sepIt{
+  font-size: 34rpx;
+  color: #545f6c;
+  line-height: 120rpx;
+  text-align: center;
+  border-bottom: 1rpx solid #2d353d;
+}
+.active{
+  font-size: 34rpx;
+  color: #fff;
+  line-height: 120rpx;
+  text-align: center;
+  border-bottom: 1rpx solid #fff; 
+  box-sizing: border-box;
+}
+
+.sortRanking{
+  width: 100%;
+  height: 96rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.sortBox{
+  font-size: 32rpx;
+  color: #fff;
+  line-height: 96rpx;
+}
+.sortRankingRightBox{
+  line-height: 96rpx;
+}
+.CKQB{
+  color: #fff;
+  font-size: 24rpx;
+}
+.iconYou{
+  font-size: 22rpx;
+  color: #fff;
+  padding-left: 10rpx;
+}
+.sixDiagramBox{
+  padding-bottom: 30rpx;
+  border-bottom: 1px solid #2f343c;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.sixDiagramA{
+    padding: 20rpx 0;
+    width: 33%;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+}
+.sixDiagramImg{
+  margin: 0 auto;
+  width: 192rpx;
+  height: 296rpx;
+}
+.sixDiagramTitle{
+  font-size: 30rpx;
+   margin: 0 auto;
+  color: #fff;
+  width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.sixDiagramName{
+   font-size: 24rpx;
+   margin: 0 auto;
+   color: #5a6078;
+  width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

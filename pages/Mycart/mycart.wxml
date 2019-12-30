@@ -1,0 +1,42 @@
+<!--pages/Mycart/mycart.wxml-->
+
+<view class="container">
+  
+<view class="KhTopbox">
+<text class="KhText">{{ conterTop }}</text>
+</view>
+<view class="Khcontent">
+<block wx:for="{{ khText }}" wx:key="*this">
+<view class="hotListBoxwaft">
+  <view class="hotListBox">
+  <view class="hotListJJ">
+  <view class="hotListJJTitle">{{ item.bookname }}</view>
+  <view class="hotListJJName">{{ item.writername }}</view>
+  <view class="hotListJJContent">￥{{ item.money }}</view>
+  <navigator class="hotListDD iconfont icon-dian"></navigator>
+  </view>
+  </view>
+  <navigator class="hotListnav">
+  <image src="{{ item.touxiang }}" class="hotListImg"></image>
+  </navigator>
+  </view>
+</block>
+</view>
+
+<view class="mycartBox">
+  <view class="mycartboxTop">
+  <view class="left">
+  <text class="mouthText">总计(元)：</text>
+  <text class="mouth">{{ mouth }}</text>
+  </view>
+  <view class="right">
+  <text class="balanceText">余额(元)：</text>
+  <text class="balance">{{ balance }}</text>
+  </view>
+  </view>
+  <view class="mycartboxdown">
+  <text class="pay">购买</text></view>
+</view>
+
+
+</view>

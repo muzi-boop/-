@@ -1,0 +1,55 @@
+<!--pages/Authordetailspage/authordetailspage.wxml-->
+<view class="container">
+  <view class="signinBox">
+    <image class="signinBoxImg" src="{{ list.touxiang }}"></image>
+    <view class="signinBoxRight">
+      <view class="signinBoxRightName">{{ list.name }} 田晓华</view>
+      <view class="signinBoxRightHome">{{ list.country }} · {{ list.city }}中国</view>
+      <view class="shareBox">
+        <icon class="shareBoxIcon iconfont icon-fenxiang"></icon>
+        <text class="shareBoxText">{{ shareFX }}</text>
+      </view>
+      <view class="follows">+关注</view>
+    </view>
+</view>
+
+    <view class="levelBox">
+      <view class="followBox">
+        <view class="followPage">{{ followPage }}关注</view>
+        <view class="follow">{{ follow }}关注</view>
+      </view>
+      <view class="fansBox">
+        <view class="fansPage">{{ followPage }}关注</view>
+        <view class="fans">{{ fans }}关注</view>
+      </view>
+      <view class="likeBox">
+        <view class="likePage">{{ followPage }}关注</view>
+        <view class="like">{{ like }}关注</view>
+      </view>
+    </view>
+<!-- 代表作 -->
+<navigator class="personalInformationBox">
+<view class="personalInformation">代表作</view>
+<view class="myNews">总共{{  }}本书</view>
+</navigator>
+<!--  -->
+ <view class="bookDetailBox" wx:for="{{ list }}" wx:key="*this">
+  <image class="bookLeftBox" src="{{ item.touxiang }}"></image>
+  <view class="bookLeftToBox">
+    <view class="bookTitle">{{ item.bookname }}</view>
+    <view class="bookScore">
+      <icon class="bookIcon iconfont icon-xingxing"></icon>
+      <icon class="bookIcon iconfont icon-xingxing"></icon>
+      <icon class="bookIcon iconfont icon-xingxing"></icon>
+      <icon class="bookIcon iconfont icon-xingxing"></icon>
+      <icon class="bookIcon iconfont icon-xingxing"></icon>
+      <text class="bookIconText"> 5.0 {{ item.satr }}</text>
+    </view>
+    <view class="bookAbout">{{ item.about }}</view>
+     <view class="bookName">{{ item.reading }}人阅读</view>
+  </view>
+</view>
+
+
+
+  </view>
