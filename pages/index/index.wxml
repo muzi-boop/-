@@ -1,14 +1,16 @@
 <!--index.wxml-->
 
 <view class="container ">
-  <view class="top">
+  <!-- <view class="top">
     <icon class="iconLeft iconfont icon-jiangbei"></icon>
     <icon class="iconRight iconfont icon-Shapecopy-copy"></icon>
-  </view>
+  </view> -->
+ <view class="xxx">
   <view class="search">
    <icon class="iconLefts iconfont icon-icon-search"></icon>
     <navigator class="searchUrl" url="{{ searchUrl }}">{{ searchText }}</navigator>
   </view>
+ </view>
   <!-- 搜索一下、皆为内容区域 -->
   <view class="sortRanking">
   <text class="sortBox">{{sortRanking}}</text>
@@ -55,7 +57,7 @@
   <!-- 六图区域 -->
   <view class="sixDiagramBox">
   <block wx:for="{{ sixDiagram }}" wx:key="*this">
-  <navigator url="/pages/BookDetail/bookDetail"bindtap="contentHttp" data-num="{{item}}" class="sixDiagramA">
+  <navigator url="/pages/BookDetail/bookDetail" bindtap="contentHttp" data-num="{{item}}" class="sixDiagramA">
   <image src="{{ item.touxiang }}" class="sixDiagramImg"></image>
   <view class="sixDiagramTitle">{{ item.bookname }}</view>
   <view class="sixDiagramName">{{ item.writername }}</view>
@@ -94,8 +96,8 @@
   <navigator class="hotListDD iconfont icon-dian"></navigator>
   </view>
   </view>
-  <navigator class="hotListnav">
-  <image src="{{ item.touxiang }}" class="hotListImg"></image>
+  <navigator class="hotListnav" url="/pages/BookDetail/bookDetail" bindtap="contentHttp" data-num="{{item}}">
+  <image src="{{ item.touxiang }}" class="hotListImg" ></image>
   </navigator>
   </view>
   </swiper-item>

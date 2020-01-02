@@ -45,6 +45,7 @@
 /* 登录后 */
 
 .signinBox {
+  margin-top: 20rpx;
   width: 100%;
   height: 240rpx;
   display: flex;
@@ -89,11 +90,18 @@
   border: 1px solid #9497ab;
 }
 
-.shareBoxText {
-  padding-left: 20rpx;
+#shareBoxText {
+  font-weight: 0;
+  padding: 0rpx;
   line-height: 60rpx;
   font-size: 24rpx;
+  display: inline;
   color: #9497ab;
+  background: #21272e;
+  box-shadow: 0;
+  border-radius: 0;
+  margin-left: 10rpx;
+  border: 0;
 }
 
 .shareBoxIcon {
@@ -165,6 +173,14 @@ font-size: 32rpx;
   width: 100%;
   height: 140rpx;
   border-bottom: 1px solid #333c47;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+.personalInformationBoxaa{
+  width: 100%;
+  height: 140rpx;
   display: flex;
   justify-content: space-between;
   flex-direction: row;

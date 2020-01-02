@@ -1,12 +1,6 @@
 <!--pages/user/user.wxml-->
 <view class="container">
   <!-- 标题 -->
-  <view class="userBoxTop">
-    <view class="userMy">{{ my }}</view>
-    <navigator url="/pages/setbox/setbok">
-    <icon class="userSet iconfont icon-shezhi" ></icon></navigator>
-  </view>
-
   <view class="unsigninBox" hidden="{{ signin }}" bindtap="signinClick">
     <view class="unsignin">{{ unsignin }}</view>
   </view>
@@ -19,7 +13,8 @@
     <view class="signinBoxRightName">{{ list.name }}</view>
     <view class="signinBoxRightHome">{{ list.country }} · {{ list.city }}</view>
     <view class="shareBox">
-    <icon class="shareBoxIcon iconfont icon-fenxiang"></icon><text class="shareBoxText">{{ shareFX }}</text>
+    <icon class="shareBoxIcon iconfont icon-fenxiang"></icon>
+    <button  id="shareBoxText" open-type="share" plain="true" bindgetuserinfo="user">{{ shareFX }}</button>
     </view>
     </view>
   </view>
@@ -61,6 +56,14 @@
 <!-- 4 -->
 <navigator class="personalInformationBox">
 <view class="personalInformation">{{ myComments }}</view>
+<icon class="goIcon iconfont icon-you"></icon>
+</navigator>
+<navigator class="personalInformationBox" url="/pages/Mycart/mycart">
+<view class="personalInformation">{{ gwc }}</view>
+<icon class="goIcon iconfont icon-you"></icon>
+</navigator>
+<navigator class="personalInformationBoxaa" url="/pages/setbox/setbok">
+<view class="personalInformation">{{ ggsz }}</view>
 <icon class="goIcon iconfont icon-you"></icon>
 </navigator>
 </view> 

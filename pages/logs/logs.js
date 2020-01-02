@@ -1,5 +1,6 @@
 //logs.js
 const util = require('../../utils/util.js')
+const app = getApp()
 Page({
   data: {
     flag:true,
@@ -35,6 +36,11 @@ Page({
     this.setData({
       flag: true
     })
+  },
+  contentHttp: function (event) {
+    console.log(event)
+    app.globalData.indexContent = event.currentTarget.dataset.num
+    console.log(app.globalData.indexContent)
   }
 })
 

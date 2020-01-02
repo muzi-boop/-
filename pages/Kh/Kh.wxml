@@ -1,11 +1,6 @@
 <!--pages/Kh/Kh.wxml-->
 <view class="container">
   
-<view class="KhTopbox">
-<navigator class="KhTopboxLeft iconfont icon-fanhuijiantou" url="{{ Goback }}"></navigator>
-<text class="KhText">{{ conterTop }}</text>
-<navigator class="KhTopRight iconfont icon-Shapecopy-copy"></navigator>
-</view>
 <view class="Khcontent">
 <block wx:for="{{ KhText }}" wx:key="*this">
 <view class="hotListBoxwaft">
@@ -17,7 +12,7 @@
   <navigator class="hotListDD iconfont icon-dian"></navigator>
   </view>
   </view>
-  <navigator class="hotListnav">
+  <navigator class="hotListnav" url="/pages/BookDetail/bookDetail" bindtap="contentHttp" data-num="{{item}}">
   <image src="{{ item.touxiang }}" class="hotListImg"></image>
   </navigator>
   </view>
