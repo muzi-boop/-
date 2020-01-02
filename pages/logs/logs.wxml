@@ -2,7 +2,7 @@
 <view class="container">
 
   <view class="topBox">
-    <view class="topBoxTitle">{{ topBoxTitle }}</view>
+    <!-- <view class="topBoxTitle">{{ topBoxTitle }}</view> -->
     <view class="topBoxColor {{ flag ? 'active':'' }}"   bindtap="click" data-index="{{ item }}">
       <view class="topBoxLista iconfont icon-sign-blue"></view>
     </view>
@@ -14,7 +14,7 @@
   <view hidden="{{ flag }}">
    <block wx:for="{{ messageBox }}" wx:key="*this">
       <view class="messageBox">
-        <navigator class="messageA">
+        <navigator class="messageA" url="/pages/BookDetail/bookDetail" bindtap="contentHttp" data-num="{{item}}">
           <image class="messageImg" src="{{ item.touxiang }}"></image>
         </navigator>
         <view class="messagetitle">{{ item.bookname }}</view>
@@ -42,10 +42,10 @@
   <view hidden="{{ !flag }}">
       <view class="messageIndexBox">
        <block wx:for="{{ messageBox }}" wx:key="*this">
-        <view class="messageIndexBoxTo">
+        <navigator class="messageIndexBoxTo" url="/pages/BookDetail/bookDetail" bindtap="contentHttp" data-num="{{item}}">
           <image class="messageIndexImg" src="{{ item.touxiang }}" ></image>
           <view class="messageIndexBoxTitle">{{ item.bookname }}</view>
-        </view>
+        </navigator>
          </block>
       </view>
   </view>

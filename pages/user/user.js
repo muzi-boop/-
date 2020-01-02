@@ -7,11 +7,13 @@ Page({
   data: {
     signin:false,
     my:"我的",
+    gwc:"购物车",
     unsignin:"请登录",
     list:[],
     shareFX:"分享",
     follow:"关注",
     like:"喜欢",
+    ggsz:"设置",
     fans:"粉丝",
     followPage:"1286",
     likePage:"6673",
@@ -85,11 +87,17 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    return {
+      title:"",
+      desc:""
+    }
   },
   signinClick: function (){
     this.setData({
       signin: true
     })
+  },
+  user (even){
+    console.log(even)
   }
 })

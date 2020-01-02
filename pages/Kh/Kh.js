@@ -1,4 +1,5 @@
 // pages/Kh/Kh.js
+const app = getApp()
 Page({
 
   /**
@@ -71,5 +72,10 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  contentHttp: function (event) {
+    console.log(event)
+    app.globalData.indexContent = event.currentTarget.dataset.num
+    console.log(app.globalData.indexContent)
   }
 })

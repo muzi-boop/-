@@ -7,7 +7,7 @@ background: #21272e;
   width: 100%;
   z-index: 5;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: row;
   box-sizing: border-box;
   padding: 0 25rpx;
@@ -32,9 +32,6 @@ background: #21272e;
 }
 
 
-.Khcontent{
-margin-top: 100rpx;
-}
 .hotListBoxwaft{
   width: 100%;
   margin-top: 40rpx;

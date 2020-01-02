@@ -123,5 +123,13 @@ Page({
     this.setData({
       share: false
     })
+  },
+  ex (){
+    this.setData({
+      disK:false
+    })
+  },
+  mpo(e){
+    console.log(e);
   }
 })

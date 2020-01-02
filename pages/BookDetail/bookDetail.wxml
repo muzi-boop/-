@@ -82,8 +82,8 @@
 <navigator class="bookBottomright">{{ bookBottomright }}</navigator>
 </view>
 
-<view hidden="{{ !disK }}" class="liberBox">
-  <view class="libarConter">
+<view hidden="{{ !disK }}" class="liberBox" bindtap="ex">
+  <view class="libarConter" catchtap="mpo">
   <image class="libarimg" src="{{ list.touxiang }}"></image>
   <view class="libarText">{{ libarText }}</view> 
   <view class="lIbOk" bindtap="libarOk">{{ libOk }}</view>
